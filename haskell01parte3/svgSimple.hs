@@ -12,13 +12,18 @@ svgCircle :: Int -> Int -> Int -> String -> String
 svgCircle x y r style = 
   printf "<circle cx='%d' cy='%d' r='%d' fill='%s' />\n" x y r style
 
--- Gera SVG com 2 círculos, um verde e um vermelho, com 0.4 de opacidade.
+-- Gera 7 circulos em formato de alvo com cores alternadas e opacidade 0.7 (o mais interno tem opacidade 1).
 -- A opacidade pode não ser suportada em alguns visualizadores de SVG.
 svgAll :: String
 svgAll = 
   svgBegin 500 500 ++ 
-  (svgCircle 60 60 50 "rgb(10, 145, 32, 0.4)") ++ 
-  (svgCircle 90 90 50 "rgb(105, 14, 30, 0.4)") ++ 
+  (svgCircle 250 250 150 "rgb(200, 55, 55, 0.7)") ++ 
+  (svgCircle 250 250 125 "rgb(255, 255, 255, 0.7)") ++ 
+  (svgCircle 250 250 100 "rgb(200, 55, 55, 0.7)") ++
+  (svgCircle 250 250 75 "rgb(255, 255, 255, 0.7)") ++
+  (svgCircle 250 250 50 "rgb(200, 55, 55, 0.7)") ++
+  (svgCircle 250 250 25 "rgb(255, 255, 255, 0.7)") ++
+  (svgCircle 250 250 5 "rgb(255, 0, 0, 1)") ++
   svgEnd
 
 main :: IO ()

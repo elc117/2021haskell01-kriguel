@@ -69,6 +69,8 @@ calcAreas :: [Float] -> [Float]
 calcAreas list = map circleArea list
 
 
--- 9)
+-- 9) WIP
+isTheChar ::
+
 charFound :: Char -> String -> Bool
 charFound c str = 
