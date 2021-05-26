@@ -43,10 +43,10 @@ onlyEven list = filter isEven list
 
 
 -- 6)
-between60and80 :: Num -> Bool
+between60and80 :: Int -> Bool
 between60and80 n = (n > 60) && (n < 80)
 
-onlyBetween60and80 :: [Num] -> [Num]
+onlyBetween60and80 :: [Int] -> [Int]
 onlyBetween60and80 list = filter between60and80 list
 
 
@@ -69,8 +69,9 @@ calcAreas :: [Float] -> [Float]
 calcAreas list = map circleArea list
 
 
--- 9) WIP
-isTheChar ::
+-- 9)
+clearNonsense :: Char -> [Char] -> [Char]
+clearNonsense c str = filter (==c) str
 
 charFound :: Char -> String -> Bool
-charFound c str = 
+charFound c str = length (clearNonsense c str) > 0
